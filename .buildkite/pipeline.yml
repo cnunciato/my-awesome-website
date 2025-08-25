@@ -3,6 +3,7 @@ steps:
     label: ":pulumi: Preview"
     command: |
       npm install
+      eval "$(pulumi env open cnunciato/default/personal --format shell)"
       pulumi preview --stack dev
     plugins:
       pulumi:
@@ -19,6 +20,7 @@ steps:
   - label: ":pulumi: Update"
     command: |
       npm install
+      eval "$(pulumi env open cnunciato/default/personal --format shell)"
       pulumi up --stack dev
     plugins:
       pulumi:
