@@ -1,0 +1,5 @@
+config:
+  aws:region: us-west-2
+  my-awesome-website:errorDocument: error.html
+  my-awesome-website:indexDocument: index.html
+  my-awesome-website:path: ./www
