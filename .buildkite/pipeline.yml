@@ -21,7 +21,7 @@ steps:
     command: |
       npm install
       eval "$(pulumi env open cnunciato/default/personal --format shell)"
-      pulumi up --stack dev
+      pulumi up --skip-preview --stack dev
     plugins:
       pulumi:
         use-oidc: true
