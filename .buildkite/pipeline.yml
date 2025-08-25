@@ -12,6 +12,7 @@ steps:
         pulumi-token-type: "urn:pulumi:token-type:access_token:personal"
         pulumi-token-scope: "user:cnunciato"
 
+  - wait
   - block: ":pulumi: Deploy?"
     depends_on: preview
     allowed_teams:
