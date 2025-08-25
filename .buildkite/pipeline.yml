@@ -1,5 +1,5 @@
 steps:
-  - id: preview
+  - key: preview
     label: ":pulumi: Preview"
     command: |
       npm install
