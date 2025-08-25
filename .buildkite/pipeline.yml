@@ -1,5 +1,6 @@
 steps:
-  - label: ":pulumi: Preview"
+  - id: preview
+    label: ":pulumi: Preview"
     command: |
       npm install
       pulumi preview
@@ -11,6 +12,7 @@ steps:
         pulumi-token-scope: "user:cnunciato"
 
   - block: ":pulumi: Deploy?"
+    depends_on: preview
     allowed_teams:
       - trusted-humans
 
