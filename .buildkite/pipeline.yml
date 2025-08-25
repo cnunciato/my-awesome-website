@@ -3,7 +3,7 @@ steps:
     label: ":pulumi: Preview"
     command: |
       npm install
-      pulumi preview
+      pulumi preview --stack dev
     plugins:
       pulumi:
         use-oidc: true
@@ -19,7 +19,7 @@ steps:
   - label: ":pulumi: Update"
     command: |
       npm install
-      pulumi preview
+      pulumi up --stack dev
     plugins:
       pulumi:
         use-oidc: true
